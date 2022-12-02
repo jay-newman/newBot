@@ -1,8 +1,6 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv/config');
 
-
-
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -11,11 +9,9 @@ const client = new Client({
     ]
 });
 
-
 client.on('ready', () => {
     console.log('The bot is ready');
 });
-
 client.on('messageCreate', message => {
 
     if (message.content === 'list') {
@@ -60,8 +56,6 @@ client.on('messageCreate', message => {
     if (message.content === 'fav') {
         message.reply({ files: [{ attachment: 'laugh.gif'}]});
     }
-
-    
 });
 
 client.login(process.env.TOKEN);
