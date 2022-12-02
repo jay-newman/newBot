@@ -1,6 +1,5 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 require('dotenv/config');
-
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -8,7 +7,6 @@ const client = new Client({
         GatewayIntentBits.MessageContent
     ]
 });
-
 client.on('ready', () => {
     console.log('The bot is ready');
 });
